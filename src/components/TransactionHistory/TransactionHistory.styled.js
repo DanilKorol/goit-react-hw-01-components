@@ -19,3 +19,11 @@ export const Head = styled.thead`
     width: calc(600px / 3);
   }
 `;
+
+export const Body = styled.tbody`
+  text-align: center;
+
+  tr:nth-child(2n) {
+    background-color: #bab6b6;
+  }
+`;

@@ -11,15 +11,7 @@ import {
   UserTag,
 } from './Profile.styled';
 
-export const Profile = ({
-  avatar,
-  userName,
-  tag,
-  location,
-  followers,
-  views,
-  likes,
-}) => {
+export const Profile = ({ avatar, userName, tag, location, stats }) => {
   return (
     <ProfileCard>
       <UserInfo>
@@ -32,15 +24,15 @@ export const Profile = ({
       <SocialStats>
         <li>
           <Label>Followers</Label>
-          <Quantity>{followers}</Quantity>
+          <Quantity>{stats.followers}</Quantity>
         </li>
         <li>
           <Label>Views</Label>
-          <Quantity>{views}</Quantity>
+          <Quantity>{stats.views}</Quantity>
         </li>
         <li>
           <Label>Likes</Label>
-          <Quantity>{likes}</Quantity>
+          <Quantity>{stats.likes}</Quantity>
         </li>
       </SocialStats>
     </ProfileCard>
@@ -52,7 +44,9 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  followers: PropTypes.number.isRequired,
-  views: PropTypes.number.isRequired,
-  likes: PropTypes.number.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }).isRequired,
 };

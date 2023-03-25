@@ -13,7 +13,11 @@ export const Item = styled.li`
 `;
 
 export const Status = styled.span`
-  color: ${props => (props.status ? 'green' : 'red')};
+  display: block;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: ${props => (props.status ? 'green' : 'red')};
 `;
 
 export const Image = styled.img`

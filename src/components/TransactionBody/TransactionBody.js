@@ -1,15 +1,13 @@
 import PropTypes from 'prop-types';
-import { Body, Row } from './TransactionBody.styled';
+import { Row } from './TransactionBody.styled';
 
 export const TransactionBody = ({ item: { type, amount, currency } }) => {
   return (
-    <Body>
-      <Row>
-        <td>{type}</td>
-        <td>{amount}</td>
-        <td>{currency}</td>
-      </Row>
-    </Body>
+    <Row>
+      <td>{type}</td>
+      <td>{amount}</td>
+      <td>{currency}</td>
+    </Row>
   );
 };
 
